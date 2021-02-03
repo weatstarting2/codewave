@@ -9,7 +9,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -124,6 +123,7 @@ class _MyHomePageState extends State<MyHomePage>
         child: SingleChildScrollView(
           controller: _scrollController,
           child: Stack(
+            //Since there was no image provided, this is the custom dotted bg
             children: [
               Container(
                 child: Column(
@@ -308,14 +308,6 @@ class _MyHomePageState extends State<MyHomePage>
                   ],
                 ),
               ),
-//              Visibility(
-//                visible: visible,
-//                child: Container(
-//                  height: MediaQuery.of(context).size.height,
-//                  width: MediaQuery.of(context).size.width,
-//                  color: Color(0x50000000),
-//                ),
-//              ),
               Positioned(
                 bottom: MediaQuery.of(context).size.height / 16,
                 child: Visibility(
